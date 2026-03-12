@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>申請管理画面</title>
+
+</head>
+
+<body>
+
+  <h1>申請一覧（管理画面）</h1>
+
+  <div class="button-area">
+    <button type="button" onclick="loadData()">最新データ取得</button>
+    <button type="button" onclick="downloadExcel()">Excelダウンロード</button>
+  </div>
+
+  <div id="monthTabs"></div>
+  <div id="sheetContainer"></div>
+
+  
+
+  <script src="js/admin.js" defer></script>
+
+</body>
+
+</html>

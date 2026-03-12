@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>立替返金</title>
+</head>
+
+<body>
+
+  <h1>立替返金</h1>
+
+  <p>
+    <label>
+      名前：
+      <input type="text" id="name" placeholder="名前">
+    </label>
+  </p>
+
+  <p>
+
+    <select id="dept">
+      <option value="" disabled selected>部署</option>
+      <option value="パフォーマンス">パフォーマンス</option>
+      <option value="トレーナー">トレーナー</option>
+      <option value="審判">審判</option>
+      <option value="運営">運営</option>
+      <option value="総務">総務</option>
+      <option value="会計">会計</option>
+      <option value="企画">企画</option>
+      <option value="広報">広報</option>
+      <option value="スポンサー">スポンサー</option>
+      <option value="普及">普及</option>
+      <option value="施設">施設</option>
+      <option value="用具">用具</option>
+      <option value="TOP">TOP</option>
+      <option value="フレマン">フレマン</option>
+    </select>
+
+  </p>
+
+  <p>
+    <select id="purpose">
+      <option value="" disabled selected>事業項目</option>
+      <option value="管理運営">管理運営</option>
+      <option value="関東リーグ">関東リーグ</option>
+      <option value="総理大臣杯">総理大臣杯</option>
+      <option value="天皇杯">天皇杯</option>
+      <option value="インカレ">インカレ</option>
+      <option value="中筑">中筑</option>
+      <option value="ソウル大学交流戦">ソウル大学交流戦</option>
+      <option value="関甲信">関甲信</option>
+      <option value="Iリーグ">Iリーグ</option>
+      <option value="体育系">体育系</option>
+      <option value="社会人リーグ">社会人リーグ</option>
+      <option value="練習試合">練習試合</option>
+      <option value="合宿">合宿</option>
+      <option value="その他イベント">その他イベント</option>
+    </select>
+
+  </p>
+
+  <p>
+
+    <select id="category">
+      <option value="" disabled selected>利用種別</option>
+      <option value="大会連盟加盟費">大会連盟加盟費</option>
+      <option value="施設機材使用料">施設機材使用料</option>
+      <option value="謝礼費">謝礼費</option>
+      <option value="通信運搬費">通信運搬費</option>
+      <option value="印刷製本費">印刷製本費</option>
+      <option value="用具等購入費">用具等購入費</option>
+      <option value="書籍費">書籍費</option>
+      <option value="その他支出">その他支出</option>
+      <option value="宿泊費">宿泊費</option>
+      <option value="交通費">交通費</option>
+    </select>
+  </p>
+
+  <p>
+
+    <label>
+      発生日：
+      <input type="date" id="useDate">
+    </label>
+  </p>
+
+
+
+  <h2>内訳</h2>
+
+  <table id="detailTable">
+    <tr>
+      <th>品名</th>
+      <th>単価</th>
+      <th>数量</th>
+      <th>金額</th>
+    </tr>
+    <tr>
+      <td><input type="text"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td class="amount"></td>
+    </tr>
+    <tr>
+      <td><input type="text"></td>
+      <td><input type="number"></td>
+      <td><input type="number"></td>
+      <td class="amount"></td>
+
+    </tr>
+
+  </table>
+
+  <button id="rowBtn" type="button">行を追加</button>
+
+  <p><strong>合計金額：</strong><span id="total">0</span> 円</p>
+
+
+
+  <h2>領収書アップロード</h2>
+
+  <input type="file" id="receiptInput" name="receipt" accept="image/*">
+
+
+
+  <p>
+    <button id="addBtn" type="button">追加</button>
+
+    <button id="registerBtn" type="button">登録</button>
+
+  <ul id="list"></ul>
+  </p>
+
+
+
+
+  <script src="js/入力用.js" defer></script>
+
+</body>
+
+</html>

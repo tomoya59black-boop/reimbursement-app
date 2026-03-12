@@ -1,0 +1,5 @@
+node_modules
+.env
+sqlitestudio-3.4.21-windows-x64
+uploads
+reimbursements
