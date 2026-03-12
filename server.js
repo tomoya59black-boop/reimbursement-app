@@ -8,8 +8,24 @@ const XLSX = require("xlsx");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+
+const fs = require("fs");
+
+if (!fs.existsSync("uploads")) {
+  fs.mkdirSync("uploads");
+}
+
 // ===== SQLite =====
-const db = new sqlite3.Database("reimbursements.db", (err) => {
+const path = require("path");
+
+const dbPath = path.join(__dirname, "reimbursements.db");
+
+const db = new sqlite3.Database(dbPath, (err) => {
+  if (err) {
+    console.error("DB接続失敗", err);
+  } else {
+    console.log("SQLite接続成功");
+  }
   if (err) {
     console.error("DB接続失敗", err);
   } else {
