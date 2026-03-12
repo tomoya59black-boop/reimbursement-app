@@ -6,7 +6,7 @@ const XLSX = require("xlsx");
 
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // ===== SQLite =====
 const db = new sqlite3.Database("reimbursements.db", (err) => {
